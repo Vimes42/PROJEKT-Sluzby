@@ -3,14 +3,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #FAFAFA;
     text-align: center;
-    margin: 0 20px;
+    margin: 60px 20px;
 }
 
-.traveller {
+.intro img {
     width: 100%;
     max-width: 350px;
     height: 290.5px;
-    margin-top: 60px;
 }
 
 hr {
@@ -34,10 +33,7 @@ h2 {
 p {
     font-size: 16px;
     font-weight: 300;
-}
-
-div p {
-    font-size: 13px;
+    color: #8B8B8B;
 }
 
 .odstavec1 {
@@ -61,10 +57,24 @@ div p {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    border-radius: 10px;
 }
 
+.sluzby1 p,
+.sluzby2 p,
+.sluzby3 p,
+.delegat1 p,
+.delegat2 p,
+.delegat3 p {
+    font-size: 13px;
+}
 
-div img {
+.sluzby1 img,
+.sluzby2 img,
+.sluzby3 img,
+.delegat1 img,
+.delegat2 img,
+.delegat3 img {
     width: 100%;
     max-width: 45px;
     margin: 20px 30px 20px 20px;
@@ -80,7 +90,6 @@ div img {
     border-radius: 20px;
     display: block;
     width: max-content;
-    justify-self: start;
     margin: auto;
 }
 
@@ -92,28 +101,29 @@ div img {
 
 .greybutton {
     background-color: #8B8B8B;
-    margin-bottom: 60px;
-}
-
-.delegat3 {
-    margin-bottom: 60px;
 }
 
 
 @media screen and (min-width: 640px) {
-    .traveller {
+    .intro img {
         width: 100%;
         max-width: 400px;
         height: 332px;
     }
+
+    h1 {
+        margin: 30px 0 10px 0;
+    }
     
     .odstavec1 {
-        margin: 30px 110px 40px 110px;
+        margin: 30px auto 40px auto;
+        max-width: 550px;
     }
 
     .odstavec2,
     .odstavec3 {
-        margin: 15px 110px 40px 110px;
+        margin: 15px auto 40px auto;
+        max-width: 550px;
     }
 
     .tlacitka {
@@ -134,7 +144,10 @@ div img {
     .sluzby,
     .delegat {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        max-width: calc(3 * 230px + 2 * 20px);
+        height: 172px;
+        margin: auto;
     }
 
     .sluzby1,
@@ -143,31 +156,139 @@ div img {
     .delegat1,
     .delegat2,
     .delegat3 {
-        margin-left: 15px;
+        max-width: 230px;
         display: inline-block;
+        margin-bottom: 0;
     }
 
-    div p {
-        margin: 20px 15px;
+    .sluzby1 img,
+    .sluzby2 img,
+    .sluzby3 img {
+        max-width: 45px;
+        margin: 40px 0 20px 0;
     }
 
-    div img {
-        margin: 40px 95px 20px 95px;
+    .delegat1 img,
+    .delegat2 img,
+    .delegat3 img  {
+        max-width: 50px;
+        margin: 40px 0 20px 0;
     }
 
-    .delegat3 {
-        margin-bottom: auto;
-    }
-
-    .delegat {
-        margin-bottom: 60px;
+    .sluzby1 p,
+    .sluzby2 p,
+    .sluzby3 p,
+    .delegat1 p,
+    .delegat2 p,
+    .delegat3 p {
+        margin: 0 0 20px 0;
     }
 }
 
-@media screen and (min-width: 1000px) {
-    .traveller {
+@media screen and (min-width: 1100px) {
+    
+    body {
+        margin: 60px auto;
+        max-width: 1040px;
+    }
+
+    .intro {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .intro img {
         width: 100%;
         max-width: 425px;
-        height: 354px;
+        order: 2;
+        margin: 0 32.5px;
     }
+
+    .inside_intro {
+        order: 1;
+        max-width: 490px;
+    }
+
+    hr {
+        margin: 10px 0;
+    }
+
+    .inside_intro p {
+        margin: 30px 0;
+    }
+
+    .tlacitka {
+      
+        justify-content: flex-start;
+    }
+
+    h2 {
+        margin: 0 0 15px 0;
+    }
+
+    .odstavec2,
+    .odstavec3 {
+        margin: 0;
+    }
+
+    .intro_sluzby,
+    .intro_delegat {
+        display: flex;
+        align-items: center;
+        margin: 80px 0;
+    }
+
+    .sluzby,
+    .delegat {
+        max-width: 550px;
+        width: 100%;
+    }
+    .sluzby {
+        order: 1;
+    }
+
+    .delegat {
+        order: 2;
+    }
+
+    .nadpis_sluzby,
+    .nadpis_delegat{
+        max-width: 430px;
+        text-align: left;
+        
+    }
+
+    .nadpis_sluzby {
+        order: 2;
+        margin-left: 60px;
+    }
+
+    .nadpis_delegat {
+        order: 1;
+        margin-right: 60px;
+    }
+
+    .sluzby1,
+    .sluzby2,
+    .sluzby3,
+    .delegat1,
+    .delegat2,
+    .delegat3 {
+        margin: 0;
+        max-width: 170px;
+        height: 190px;
+    }
+
+    .sluzby1 p,
+    .sluzby2 p,
+    .sluzby3 p,
+    .delegat1 p,
+    .delegat2 p,
+    .delegat3 p {
+        margin: 0 15px 40px 15px;
+    }
+
+    
 }
