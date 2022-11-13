@@ -144,7 +144,7 @@ p {
     .sluzby,
     .delegat {
         display: flex;
-        justify-content: space-between;
+        
         max-width: calc(3 * 230px + 2 * 20px);
         height: 172px;
         margin: auto;
@@ -160,6 +160,14 @@ p {
         display: inline-block;
         margin-bottom: 0;
     }
+
+    .sluzby2,
+    .sluzby3,
+    .delegat2,
+    .delegat3 {
+        margin-left: 20px;
+    }
+    
 
     .sluzby1 img,
     .sluzby2 img,
